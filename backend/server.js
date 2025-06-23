@@ -7,14 +7,12 @@ const app = express();
 
 app.use(cookieParser());
 
-// Configuración correcta de CORS
-// app.use(cors({
-//   origin: 'http://127.0.0.1:5500', // Origen específico del frontend
-//   credentials: true
-// }));
-
 const corsOptions = {
-  origin: ['http://localhost:5000', 'http://127.0.0.1:5500'], // Reemplaza con tu URL frontend
+  origin: [
+    'http://localhost:5000',
+    'http://127.0.0.1:5500', // Reemplaza con tu URL frontend
+    'https://6859ad5cf4c110e31ef916c9--startling-squirrel-7332d4.netlify.app/'
+  ],
   credentials: true, // Permite cookies
   exposedHeaders: ['set-cookie']
 };
