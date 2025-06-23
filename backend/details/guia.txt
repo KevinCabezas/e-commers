@@ -1,0 +1,24 @@
+2. Inicializa el proyecto con NPM
+
+npm init -y
+Esto crea un archivo package.json con la configuración básica.
+
+✅ 3. Instala Express
+
+npm install express
+Opcionalmente, también puedes instalar otras herramientas útiles:
+
+npm install nodemon --save-dev
+nodemon reinicia automáticamente el servidor al detectar cambios en el código.
+
+
+
+npm install dotenv
+
+npm install mongoose bcryptjs jsonwebtoken cors 
+
+npm install express-rate-limit
+
+npm install cookie-parser
+
+npm run dev ->iniciar la api con demon

@@ -1,0 +1,161 @@
+Comandos Básicos (Inicialización y Estado)
+
+git init --> Para qué sirve: Inicializa un repositorio Git en tu carpeta local.
+
+
+git status --> Para qué sirve: Muestra el estado de los archivos (modificados, staged, sin seguimiento).
+
+Ejemplo:
+
+git status
+git add <archivo>
+
+Para qué sirve: Añade archivos al área de staging (preparación para commit).
+
+Ejemplos:
+
+bash
+git add index.html          # Añade un archivo específico
+git add .                  # Añade TODOS los cambios
+🔹 Comandos de Commit (Guardar Cambios)
+git commit -m "mensaje"
+
+Para qué sirve: Guarda los cambios en el repositorio con un mensaje descriptivo.
+
+Ejemplo:
+
+bash
+git commit -m "Agregué el navbar"
+git log
+
+Para qué sirve: Muestra el historial de commits (con autores, fechas y mensajes).
+
+Ejemplo:
+
+bash
+git log --oneline          # Muestra una versión resumida
+🔹 Trabajo con Ramas (Branches)
+git branch
+
+Para qué sirve: Lista todas las ramas locales (* indica la rama actual).
+
+Ejemplo:
+
+bash
+git branch
+git checkout -b <nombre-rama>
+
+Para qué sirve: Crea una nueva rama y cambia a ella.
+
+Ejemplo:
+
+bash
+git checkout -b feature/login
+git merge <rama>
+
+Para qué sirve: Fusiona una rama con la rama actual.
+
+Ejemplo:
+
+bash
+git merge feature/login
+🔹 Trabajo con Remotos (GitHub, GitLab, etc.)
+git remote add origin <url-repositorio>
+
+Para qué sirve: Conecta tu repositorio local con un repositorio remoto.
+
+Ejemplo:
+
+bash
+git remote add origin https://github.com/tu-usuario/tu-repo.git
+git push -u origin <rama>
+
+Para qué sirve: Sube tus commits al repositorio remoto.
+
+Ejemplo:
+
+bash
+git push -u origin main
+git pull
+
+Para qué sirve: Descarga cambios del remoto y los fusiona con tu rama local.
+
+Ejemplo:
+
+bash
+git pull origin main
+git clone <url-repositorio>
+
+Para qué sirve: Clona (descarga) un repositorio remoto a tu máquina.
+
+Ejemplo:
+
+bash
+git clone https://github.com/tu-usuario/tu-repo.git
+🔹 Deshacer Cambios (Errores Frecuentes)
+git restore <archivo>
+
+Para qué sirve: Descarta cambios en un archivo modificado (antes de git add).
+
+Ejemplo:
+
+bash
+git restore index.html
+git reset --hard HEAD
+
+Para qué sirve: Elimina TODOS los cambios locales no commitidos.
+
+Ejemplo:
+
+bash
+git reset --hard HEAD
+git revert <commit-hash>
+
+Para qué sirve: Crea un nuevo commit que deshace un commit anterior.
+
+Ejemplo:
+
+bash
+git revert abc1234
+🔹 Comandos Avanzados (Útiles)
+git stash
+
+Para qué sirve: Guarda cambios temporales sin hacer commit (útil para cambiar de rama).
+
+Ejemplo:
+
+bash
+git stash pop           # Recupera los cambios guardados
+git diff
+
+Para qué sirve: Muestra diferencias entre archivos modificados y el último commit.
+
+Ejemplo:
+
+bash
+git diff
+git tag -a v1.0 -m "Versión 1.0"
+
+Para qué sirve: Crea un tag (etiqueta) para versiones específicas.
+
+Ejemplo:
+
+bash
+git push --tags         # Sube tags al remoto
+📌 Flujo de Trabajo Típico
+bash
+git add .                    # Añade cambios
+git commit -m "Mensaje"      # Guarda cambios
+git push origin main         # Sube al remoto
+💡 Tips Importantes
+Siempre haz git status para verificar el estado antes de actuar.
+
+Usa ramas (git branch) para trabajar en features sin afectar main.
+
+Protege tu rama main en GitHub/GitLab (activa "Pull Requests").
+
+
+
+
+$ git config --global core.autocrlf true
+git branch -m master main

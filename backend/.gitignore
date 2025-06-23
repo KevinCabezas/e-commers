@@ -1,0 +1,27 @@
+# --- Carpetas y archivos que no deben versionarse ---
+
+# Ignorar node_modules (en cualquier parte del proyecto)
+**/node_modules/
+
+# Ignorar carpeta details dentro de backend
+backend/details/
+
+# Ignorar variables de entorno
+.env
+
+# Ignorar archivo de conexión a MongoDB
+backend/config/connection.js
+
+# Logs y temporales
+*.log
+*.tmp
+npm-debug.log*
+
+# Dependencias y locks
+package-lock.json
+yarn.lock
+
+# Archivos del editor
+.vscode/
+.idea/
+.DS_Store

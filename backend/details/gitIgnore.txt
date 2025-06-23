@@ -1,0 +1,10 @@
+Explicación de lo que se ignora:
+node_modules/: No debe subirse (se reconstruye con npm install).
+
+details/: Carpeta personalizada que quieres excluir (según tu requerimiento).
+
+Archivos .env: Contienen variables sensibles (como claves de MongoDB o JWT).
+
+Logs y archivos temporales: No son relevantes para el repositorio.
+
+package-lock.json: Opcional. Si usas yarn, reemplázalo por yarn.lock.

@@ -1,0 +1,75 @@
+Para arrancar la db
+& "C:\Program Files\MongoDB\Server\8.0\bin\mongod.exe" 
+
+
+mongosh  # Se conecta a localhost:27017 por defecto
+2. Comandos Básicos de Consulta
+Mostrar bases de datos:
+
+
+show dbs
+Usar una base de datos:
+
+use <nombre_bd> --> tambien es para crear 
+
+Mostrar colecciones:
+show collections
+
+3. Operaciones CRUD
+Insertar un documento:
+
+db.<coleccion>.insertOne({ campo: "valor" })
+Ejemplo:
+
+javascript
+db.users.insertOne({ name: "Alice", age: 25 })
+Buscar documentos:
+
+javascript
+db.<coleccion>.find({ query })
+Ejemplo:
+
+javascript
+db.users.find({ age: { $gt: 20 } }) // Mayores de 20 años
+Actualizar documentos:
+
+javascript
+db.<coleccion>.updateOne({ filtro }, { $set: { campo: "nuevo_valor" } })
+Ejemplo:
+
+javascript
+db.users.updateOne({ name: "Alice" }, { $set: { age: 26 } })
+Eliminar documentos:
+
+javascript
+db.<coleccion>.deleteOne({ filtro })
+Ejemplo:
+
+javascript
+db.users.deleteOne({ name: "Alice" })
+4. Índices
+Crear un índice:
+
+javascript
+db.<coleccion>.createIndex({ campo: 1 }) // 1 para ascendente, -1 para descendente
+Ejemplo:
+
+javascript
+db.users.createIndex({ email: 1 }, { unique: true })
+Listar índices:
+
+javascript
+db.<coleccion>.getIndexes()
+5. Operaciones de Administración
+Estadísticas de una colección:
+
+javascript
+db.<coleccion>.stats()
+Eliminar una colección:
+
+javascript
+db.<coleccion>.drop()
+Eliminar una base de datos:
+
+javascript
+db.dropDatabase()
