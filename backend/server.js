@@ -8,10 +8,13 @@ const app = express();
 app.use(cookieParser());
 
 const corsOptions = {
+  // origin: [
+  //   'http://localhost:5000',
+  //   'http://127.0.0.1:5500', // Reemplaza con tu URL frontend
+  //   'https://startling-squirrel-7332d4.netlify.app'
+  // ],
   origin: [
-    'http://localhost:5000',
-    'http://127.0.0.1:5500', // Reemplaza con tu URL frontend
-    'https://startling-squirrel-7332d4.netlify.app'
+    '*',
   ],
   credentials: true, // Permite cookies
   exposedHeaders: ['set-cookie']
